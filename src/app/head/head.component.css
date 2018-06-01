@@ -1,0 +1,43 @@
+.Cabeza{
+    display: flex;
+    justify-content: right;
+    background-color: lightgray;
+}
+
+.Cabeza h1{
+    /* background-color: black; */
+    font-size: 70px;
+    margin: 0px;
+    padding: 0px;
+    width: fit-content;
+}
+
+input{
+    font-size: 30px;
+    border-radius: 20px;
+    border: 0px;
+    height: 95%;
+    box-shadow: 0px 0px 10px darkgrey;
+}
+
+input:focus{
+    animation: buttonMove .5s infinite;
+}
+
+@keyframes buttonMove{
+    10%, 100%{
+        background-color: grey;
+    }
+    20%, 90%{
+        background-color: rgb(124, 124, 124);
+    }
+    30%, 80%{
+        background-color: rgb(121, 121, 121);
+    }
+    40%, 70%{
+        background-color: rgb(114, 114, 114);
+    }
+    50%, 60%{
+        background-color: rgb(107, 107, 107);
+    }
+}

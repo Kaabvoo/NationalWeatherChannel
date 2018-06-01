@@ -12,4 +12,8 @@ export class HeadComponent implements OnInit {
   ngOnInit() {
   }
 
+  subText(i){
+    console.log(i.target.inputContry.value);
+    return false;
+  }
 }
