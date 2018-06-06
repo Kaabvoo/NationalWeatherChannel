@@ -1,3 +1,11 @@
-<p>
-    No this is no bullshit, its art!
-</p>
+<div class="CardList" >
+    <div class="Card" *ngFor="let w of weather | async; let i = index">
+        <p class="where">{{w.city + "," + w.ctry}}</p>
+        <div class="icons">
+            ICONO
+            <p class="temp" (click)="estadoT = !estadoT" >{{estadoT ? w.temp+"°C" : w.tempF+"°F"}}</p>
+        </div>
+        {{w.weat}}
+        <p class="eliminarC" (click)="testEliminate(i)" >Eliminar</p>
+    </div>
+</div>

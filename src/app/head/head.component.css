@@ -1,6 +1,7 @@
 .Cabeza{
     display: flex;
     justify-content: right;
+    align-items: center;
     background-color: lightgray;
 }
 
@@ -13,31 +14,29 @@
 }
 
 input{
-    font-size: 30px;
+    margin: 5px;
+    padding: 3px;
+    font-size: 25px;
     border-radius: 20px;
-    border: 0px;
-    height: 95%;
-    box-shadow: 0px 0px 10px darkgrey;
+    box-shadow: 0px 0px 10px black;
 }
 
-input:focus{
-    animation: buttonMove .5s infinite;
-}
+@media screen and (max-width: 768px) {
 
-@keyframes buttonMove{
-    10%, 100%{
-        background-color: grey;
+    div.Cabeza{
+        font-size: 0px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
     }
-    20%, 90%{
-        background-color: rgb(124, 124, 124);
+
+    div.Cabeza h1{
+        font-size: 60px;
     }
-    30%, 80%{
-        background-color: rgb(121, 121, 121);
+
+    div.Cabeza input{
+        width: 93%;
     }
-    40%, 70%{
-        background-color: rgb(114, 114, 114);
-    }
-    50%, 60%{
-        background-color: rgb(107, 107, 107);
-    }
+    
 }

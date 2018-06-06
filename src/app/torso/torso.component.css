@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu+Mono|Patua+One|Gloria+Hallelujah');
+
+div.CardList{
+    display: flex;
+    order: 4;
+    flex-flow: wrap;
+    justify-content: flex-start;
+}
+
+div.Card{
+    background-color: rgba(0, 162, 255, 0.185);
+    padding: 5px 5px;
+    margin: 5px 5px;
+    width: 260px;
+    border-radius: 10px;
+}
+
+div.Card:not(i){
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 35px;
+}
+div.Card *{
+    padding: 0px;
+    margin: 5px;
+}
+
+.where{
+    font-size: auto;
+    text-align: center;
+}
+
+.where:hover{
+    cursor: pointer;
+}
+
+.temp{
+    display: inline-block;
+    font-size: 70px;
+    z-index: 10;
+}
+
+.temp:hover{
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons i.wi:hover{
+    cursor: pointer;
+}
+
+.micel{
+    height: 48%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+button.borrar{
+    font-size: 15px;
+    border: 0px;
+    width: 100%;
+    margin: 0px;
+    background-color: red;
+    font-family: 'Patua One';
+}
+
+div.Card p.eliminarC{
+    background-color: red;
+    border-radius: 25px;
+    width: 96%;
+    text-align: right;
+    cursor: pointer;
+}
+
+button.borrar:hover{
+    width: 100%;
+    margin: 0px;
+    background-color: brown;
+    font-size: 30px;
+    font-family: 'Patua One';
+}   
+
+.Detalles{
+    margin: 0px;
+    width: 40%;
+}
+
+.Detalles *{
+    margin: 0px;
+    font-size: 15px;
+}

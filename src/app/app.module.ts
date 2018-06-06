@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { TorsoComponent } from './torso/torso.component';
 import { HttpModule } from '@angular/http';
+import { StoreModule } from '@ngrx/store';
+import { weatherReducer } from './rxjs/reducer/weather.reducer';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    StoreModule.forRoot({
+      reducerWeather: weatherReducer,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
