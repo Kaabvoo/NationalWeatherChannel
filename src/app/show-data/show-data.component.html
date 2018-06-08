@@ -1,0 +1,23 @@
+<div class="Modelo">
+  <p class="closeWindow" routerLink="" >Cerrar</p>
+  <div class="DBox">
+      <div class="Now" *ngIf="now">
+          <p class="place">{{now.name}}</p>
+          <h2>Details for Today:</h2>
+          <p>Actual Temperature: {{now.temp}}</p>
+          <p>Max Temperature: {{now.max}}</p>
+          <p>Min Temperature: {{now.min}}</p>
+          <p>Humidity: {{now.hum}}</p>
+          <p>Preassure: {{now.pres}}</p>
+          <p>Wind Speed: {{now.ws}}</p>
+          <p>Wind Degree: {{now.wd}}</p>
+          <p>Sunrise at: {{now.srise}}</p>
+          <p>Sunset at: {{now.sset}}</p>
+      </div>
+      <hr/>
+      <div class="Future">
+          <h2>Details for the next Hours</h2>
+          <canvas id="myChart" height="100"></canvas>
+      </div>
+  </div>
+</div>

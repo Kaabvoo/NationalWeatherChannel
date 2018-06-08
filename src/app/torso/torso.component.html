@@ -1,8 +1,8 @@
 <div class="CardList" >
     <div class="Card" *ngFor="let w of weather | async; let i = index">
-        <p class="where">{{w.city + "," + w.ctry}}</p>
+        <p class="where" (click)="sendName.selected(w.city)" routerLink="/data" >{{w.city + "," + w.ctry}}</p>
         <div class="icons">
-            ICONO
+            <p (click)="sendName.selected(w.city)" routerLink="/data" >ICONO</p>
             <p class="temp" (click)="estadoT = !estadoT" >{{estadoT ? w.temp+"°C" : w.tempF+"°F"}}</p>
         </div>
         {{w.weat}}

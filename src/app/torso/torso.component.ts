@@ -5,6 +5,7 @@ import { Store } from "@ngrx/store";
 import { card } from "../modelo/objetos.model";
 import { AppState } from "../rxjs/app.state";
 import * as weatherActions from "../rxjs/actions/weather.actions";
+import { GetWeatherService } from "../services/get-weather.service";
 
 @Component({
   selector: 'app-torso',
@@ -13,18 +14,20 @@ import * as weatherActions from "../rxjs/actions/weather.actions";
 })
 export class TorsoComponent implements OnInit {
   weather: Observable<card>
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>, public sendName: GetWeatherService) {
     this.weather = store.select("reducerWeather");
   }
   estadoT: Boolean = true;
   tempF:Number;
 
   ngOnInit() {
-    this.store.dispatch(new weatherActions.RefreshPage)
+    this.store.dispatch(new weatherActions.RefreshPage);
   }
 
   testEliminate(i){
-    this.store.dispatch(new weatherActions.EraseAction(i))
+    this.store.dispatch(new weatherActions.EraseAction(i));
   }
 
+  showModal(){
+  }
 }
